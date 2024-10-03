@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 
   //Validate body
   if (empty($_POST['message'])) {
-    $messageErr = 'Feedback is required';
+    $messageErr = 'This field is required';
   } else {
     $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
   }
@@ -132,19 +132,20 @@ if (isset($_POST['submit'])) {
                             <div class="mx-0 mb-1 sm:mb-4">
                                 <div class="mx-0 mb-1 sm:mb-4">
                                     <label for="name" class="pb-1 text-xs uppercase tracking-wider"></label><input type="text" id="name" autocomplete="given-name" placeholder="Your name" class="mb-2 w-full rounded-md text-gray-700 border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0" name="name" value="<?php echo htmlspecialchars($name); ?>">
-                                    <?php if(!empty($nameErr)) {?> <span class="text-red"><?php echo $nameErr; ?></span> <?php } ?>
+                                    <?php if(!empty($nameErr)) {?> <span class="text-red-600 text-xs"><?php echo $nameErr; ?></span> <?php } ?>
                                 </div>
                                 
                                 <div class="mx-0 mb-1 sm:mb-4">
                                     <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label><input type="email" id="email" autocomplete="email" placeholder="Your email address" class="mb-2 w-full rounded-md text-gray-700 border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0" name="email" value="<?php echo htmlspecialchars($email); ?>">
+                                    <?php if(!empty($emailErr)) {?> <span class="text-red-600 text-xs"><?php echo $emailErr; ?></span> <?php } ?>
                                 </div>
-                                <?php if(!empty($emailErr)) {?> <span class="text-red"><?php echo $emailErr; ?></span> <?php } ?>
                             </div>
                             
                             <div class="mx-0 mb-1 sm:mb-4">
                                 <label for="textarea" class="pb-1 text-xs uppercase tracking-wider"></label><textarea id="message" name="message" cols="30" rows="5" placeholder="Write your message..." class="mb-2 w-full rounded-md text-gray-700 border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-900 sm:mb-0"><?php echo htmlspecialchars($message); ?></textarea>
+                                <?php if (!empty($messageErr)) { ?> <span class="text-red-600 text-xs"> <?php echo $messageErr; ?></span> <?php } ?>
                             </div>
-                            <?php if (!empty($messageErr)) { ?> <span class="text-danger"> <?php echo $messageErr; ?></span> <?php } ?>
+                           
                         </div>
                         <div class="text-center">
                             <button type="submit" name="submit" class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send Message</button>
