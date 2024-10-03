@@ -103,7 +103,6 @@ if (isset($_POST['submit'])) {
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
                                 </h3>
                                 <p class="text-gray-600 dark:text-slate-400">Mobile: +63 (999) 123-4567</p>
                                 <p class="text-gray-600 dark:text-slate-400">Mail: mariaweb@gmail.com</p>
