@@ -52,9 +52,6 @@ if (isset($_POST['submit'])) {
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div class="mb-4">
             <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-                <p class="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
-                    Contact
-                </p>
                 <h2
                     class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
                     Get in Touch
@@ -103,6 +100,7 @@ if (isset($_POST['submit'])) {
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
+                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
                                 </h3>
                                 <p class="text-gray-600 dark:text-slate-400">Mobile: +63 (999) 123-4567</p>
                                 <p class="text-gray-600 dark:text-slate-400">Mail: mariaweb@gmail.com</p>
